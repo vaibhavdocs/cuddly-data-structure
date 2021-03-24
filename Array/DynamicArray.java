@@ -8,6 +8,14 @@ Exmaple - Consider an empty array A of size 2.
     - Create another static array of size double of the original array
     - Copy the content of the original static array to new array
 */
+
+/*
+Time complexity with arrays - 
+Access : O[1]    - because arrays are indexable 
+Searching : O[n] - searching for an element can lead traverse through wehole array 
+Insertion : O[n] - If shifting is involved then it is O[n]
+Deletion : O[n]  - because of the shifting, it can be time complex operation
+*/
 package Array;
 
 public class DynamicArray {
@@ -22,7 +30,7 @@ public class DynamicArray {
     }
 
     public void Add(int element) {
-        // currentSize = length ; then double the size of the array
+        // currentSize == length ; then double the size of the array
         if(currentSize == currentArray.length) {
             // Generate new array with double of the size
             int[] newStaticArray = new int[2*currentSize];
