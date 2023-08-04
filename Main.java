@@ -1,8 +1,7 @@
 import Array.DynamicArray;
 import LL.Node;
 
-
-class Test {
+class Main {
     public static void main(String[] args) {
             
 //         DynamicArray da = new DynamicArray(4);
@@ -18,8 +17,10 @@ class Test {
         Node.head = l1;
         l1.next = l2;
         l2.next = l3;
+        
         Node.tail = l3;
 
         l1.getLinkedlist();
+        System.out.println(l1.size());
     }
 }

@@ -72,12 +72,23 @@ public class Node {
     public static Node tail;
     private int data;
     public Node next;
+    public Node prev;
 
     public Node(int data) {
         this.data = data;
         this.next = null;       
     }
+
+    public Node(int data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
     
+    public Node(int data, Node next, Node prev) {
+        this.data = data;
+        this.next = next;
+        this.prev = prev;
+    }
 
     // Gets next node in the linked list 
     public Node getNextNode(Node currentNode){ 
@@ -87,14 +98,21 @@ public class Node {
     public void getLinkedlist() {
         Node currentNode = head;
         while(currentNode.next != null) {
-            System.out.print(currentNode.data + "-->");
+            System.out.print(currentNode.data + "--> ");
             currentNode = currentNode.next;
         }
+        System.out.println();
     }
 
     // size()
     public int size() {
-        return 1;
+        int count = 0;
+        Node tempHead = this.head;
+        while(tempHead.next != null){
+            count = count + 1;
+            tempHead = tempHead.next;
+        }
+        return count;
     }
 
     // isEmpty()
